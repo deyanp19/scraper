@@ -19,7 +19,7 @@ mongoose.connect("mongodb://localhost/week18Populater");
  
 app.get("/scrape", function(req, res) {
   
-  axios.get("http://www.echojs.com/").then(function(response) {
+  axios.get("https://www.nytimes.com/").then(function(response) {
         var $ = cheerio.load(response.data);
  
     $("article h2").each(function(i, element) {
