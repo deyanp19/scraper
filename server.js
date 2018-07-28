@@ -3,33 +3,24 @@ var bodyParser = require("body-parser");
 var logger = require("morgan");
 var mongoose = require("mongoose");
 
-
 var axios = require("axios");
 var cheerio = require("cheerio");
-
-
 var db = require("./models");
 
 var PORT = 3000;
-
-
 var app = express();
-
-
 app.use(logger("dev"));
  
 app.use(bodyParser.urlencoded({ extended: true }));
  
 app.use(express.static("public"));
 
- 
 mongoose.connect("mongodb://localhost/week18Populater");
  
 app.get("/scrape", function(req, res) {
   
   axios.get("http://www.echojs.com/").then(function(response) {
-   
-    var $ = cheerio.load(response.data);
+        var $ = cheerio.load(response.data);
  
     $("article h2").each(function(i, element) {
       
@@ -72,8 +63,6 @@ app.get("/articles", function(req, res) {
       res.json(err);
     });
 });
-
-
 app.get("/articles/:id", function(req, res) {
 
   db.Article.findOne({ _id: req.params.id })
@@ -88,8 +77,6 @@ app.get("/articles/:id", function(req, res) {
       res.json(err);
     });
 });
-
-
 app.post("/articles/:id", function(req, res) {
 
   db.Note.create(req.body)
