@@ -1,15 +1,15 @@
 {
-  "name": "mongoose_skeleton",
+  "name": "scrape_nyt",
   "version": "1.0.0",
-  "description": "",
+  "description": "creates web app that gets articles from nytimes",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
     "watch": "nodemon server.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "deyan petrov",
+  "license": "Unlicense",
   "dependencies": {
     "axios": "^0.16.2",
     "body-parser": "^1.18.2",
@@ -17,5 +17,17 @@
     "express": "^4.16.1",
     "mongoose": "^5.0.11",
     "morgan": "^1.9.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deyanp19/scraper.git"
+  },
+  "keywords": [
+    "cheerio",
+    "mangoose"
+  ],
+  "bugs": {
+    "url": "https://github.com/deyanp19/scraper/issues"
+  },
+  "homepage": "https://github.com/deyanp19/scraper#readme"
 }

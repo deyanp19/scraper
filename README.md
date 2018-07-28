@@ -7,4 +7,4 @@ creates web app that gets articles from nytimes
 	-mongoose
 	-body-parser	
 	-request
-The application runs on port 3000 on a local machine . It needs to get deployed onto heroku
+The application runs on port 3000 on a local machine . It needs to get deployed onto heroku.
